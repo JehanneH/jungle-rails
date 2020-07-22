@@ -1,2 +1,15 @@
-<div> <%= @products %> </div>
-<div> <%= @categories %> </div>
+ <header class="page-header">
+    <h1>Admin &raquo; Dashboard</h1>
+  </header>
+<table class="table table-condensed">
+  <tbody>
+    <tr>
+      <td>Number of <%= link_to 'products', admin_products_path %> in store</td> 
+      <td><%= @products %></td> 
+    </tr>
+    <tr>
+      <td>Number of categories in store</td> 
+      <td><%= @categories %></td> 
+    </tr>
+  </tbody>
+</table>
