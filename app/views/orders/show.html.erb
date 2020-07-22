@@ -8,6 +8,17 @@
     <h4>Thank you for your order!</h4>
   </div>
 
+
+<div>
+  <%= @order.line_items[0].product.id %>
+    <%= image_tag @order.line_items[0].product.image.tiny %>
+    <%= @order.line_items[0].product.name %>
+    <%= @order.line_items[0].product.description %>
+  
+</div>
+
+<%= @order.email %>
+
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
