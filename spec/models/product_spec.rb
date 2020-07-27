@@ -17,11 +17,29 @@ RSpec.describe Product, type: :model do
       expect(subject).to_not be_valid
     end
 
-   
+    # validates :price, presence: true
+    it "product is not valid without price" do
+      subject.price_cents = nil
+      expect(subject).to_not be_valid
+    end
+
+    # validates :quantity, presence: true
+    it "product is not valid without quantity" do
+      subject.quantity = nil
+      expect(subject).to_not be_valid
+    end
+
+    # validates :category, presence: true
+    it "product is not valid without category" do
+      subject.category = nil
+      expect(subject).to_not be_valid
+    end
     
+    it "is valid with valid attributes" do
+      expect(subject).to be_valid
+    end
   end
 end
 
 
-# validates :quantity, presence: true
-# validates :category, presence: true
+
