@@ -52,7 +52,27 @@ RSpec.describe User, type: :model do
       expect(subject.errors.full_messages).to include "Password confirmation can't be blank"
     end
 
-    it ""
+    it "is not valid when the email is not unique (not case senstive)" do
+      first_subject = User.new(
+        first_name: "New", 
+        last_name: "User", 
+        email: "test@test.com", 
+        password: "password", 
+        password_confirmation: "password"
+      )
+      first_subject.save
 
+      second_subject = User.new(
+        first_name: "Another", 
+        last_name: "Person", 
+        email: "TEST@TEST.com", 
+        password: "password", 
+        password_confirmation: "password"
+      )
+      second_subject.save
+      expect(second_subject).to_not be_valid
+    end
+
+   
   end
 end
