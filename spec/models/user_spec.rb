@@ -71,6 +71,20 @@ RSpec.describe User, type: :model do
       )
       second_subject.save
       expect(second_subject).to_not be_valid
+      expect(second_subject.errors.full_messages).to include "Email has already been taken"
+    end
+
+    it "is not valid if password length is too short (less than 3 characters)" do
+      new_subject = User.new(
+        first_name: "Another", 
+        last_name: "Person", 
+        email: "tes@test.com", 
+        password: "no", 
+        password_confirmation: "no"
+      )
+      new_subject.save
+      expect(new_subject).to_not be_valid
+      expect(new_subject.errors.full_messages).to include "Password is too short (minimum is 3 characters)"
     end
 
    
