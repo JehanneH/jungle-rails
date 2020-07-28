@@ -59,3 +59,9 @@ group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
 end
+
+group :test do
+  gem 'capybara', '~> 2.7.1'
+  gem 'poltergeist' 
+  gem 'database_cleaner'
+end
