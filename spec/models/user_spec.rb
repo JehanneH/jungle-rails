@@ -86,7 +86,14 @@ RSpec.describe User, type: :model do
       expect(new_subject).to_not be_valid
       expect(new_subject.errors.full_messages).to include "Password is too short (minimum is 3 characters)"
     end
-
+    
+    describe '.authenticate_with_credentials' do
+      it "authenticates when email is correct but contains spaces on either side" do
+       subject.save
+       authenticate = User.authenticate_with_credentials(" " + subject.email + " ", subject.password)
+       expect(authenticate).to eq subject
+      end
+    end
    
   end
 end
