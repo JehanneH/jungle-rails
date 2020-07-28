@@ -88,12 +88,17 @@ RSpec.describe User, type: :model do
     end
     
     describe '.authenticate_with_credentials' do
-      it "authenticates when email is correct but contains spaces on either side" do
+      it "authenticates when email is correct but contains empty spaces on either side" do
        subject.save
        authenticate = User.authenticate_with_credentials(" " + subject.email + " ", subject.password)
        expect(authenticate).to eq subject
       end
+
+      it "authenticates when email is correct but user has used wrong case" do
+        subject.save
+        authenticate = User.authenticate_with_credentials("JH@email.com", subject.password)
+        expect(authenticate).to eq subject
+       end
     end
-   
   end
 end
