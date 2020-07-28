@@ -15,4 +15,15 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
       )
     end
   end
+
+  scenario "see that item is added to cart" do
+    visit root_path
+    
+    first('.product').click_on 'Add'
+    
+    expect(page).to have_content('My Cart (1)')
+
+    save_screenshot('cart_item.png')
+
+  end
 end
