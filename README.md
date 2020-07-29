@@ -49,3 +49,22 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Stripe
 
 ## Screenshots
+
+### Products page featuring a sold out product:
+!["soldout-product"](https://github.com/JehanneH/jungle-rails/blob/master/app/assets/images/soldout-product.png?raw=true)
+
+### Signup for account with encrypted password:
+!["signup"](https://github.com/JehanneH/jungle-rails/blob/master/app/assets/images/signup-feature.png?raw=true)
+
+### Admin product page, with ability to add a new product:
+!["admin"](https://github.com/JehanneH/jungle-rails/blob/master/app/assets/images/admin-product-new.png?raw=true)
+
+### Empty Cart with message:
+!["empty-cart"](https://github.com/JehanneH/jungle-rails/blob/master/app/assets/images/empty-cart.png?raw=true)
+
+### Full Cart - with item count displayed in navbar
+!["full-cart"](https://github.com/JehanneH/jungle-rails/blob/master/app/assets/images/full-cart.png?raw=true)
+
+### Completed Order
+!["completed-order"](https://github.com/JehanneH/jungle-rails/blob/master/app/assets/images/completed-order.png?raw=true)
+
