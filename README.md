@@ -7,19 +7,19 @@ View screenshots of the final product futher down.
 This project was created and published by me as part of my learnings at [Lighthouse Labs.](https://www.lighthouselabs.ca/)
 
 ## Features Implemented
-<b> Sold Out Badge</b>: When product has 0 quantity, a sold out badge will be displayed on the product list page
+<b> Sold Out Badge</b>: When product has 0 quantity, a sold out badge will be displayed on the product list page.
 
 <b> Admin Categories</b>: Admin users can list and create new categories. Admins can add new products using the new category, they can also delete products.
 
-<b> User Authentication</b>: A visitor can go to registration page from any page to create an accout. A visitor can sign up for a user account and can log in. A user can log out from any page. A user cannot sign up with an existing email address. Passwods are encrypted using bcrypt gem
+<b> User Authentication</b>: A visitor can go to registration page from any page to create an accout. A visitor can sign up for a user account and can log in. A user can log out from any page. A user cannot sign up with an existing email address. Passwords are encrypted using bcrypt gem.
 
 <b>Order Details Page</b>:
- The order page contains items, their image, name, description, quantities and line item totals. Email used to place order is displayed
+ The order page contains items, their image, name, description, quantities and line item totals. Email used to place order is displayed.
 
 ## Bug Fixes
-<b>Missing Admin Security</b>: User must enter HTTP auth login/password to access admin functionality
+<b>Missing Admin Security</b>: User must enter HTTP auth login/password to access admin functionality.
 
-<b>Checking out with Empty Cart</b>: If visitor goes to the cart when cart is empty, a message is displayed indicating that there are no items in the cart. Visitor is prompted to keep shopping with link to products page
+<b>Checking out with Empty Cart</b>: If visitor goes to the cart when cart is empty, a message is displayed indicating that there are no items in the cart. Visitor is prompted to keep shopping with link to products page.
 
 ## Testing
 - RSpec
