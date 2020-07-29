@@ -7,6 +7,12 @@
   <div class="alert alert-warning" role="alert">
     Your Cart is Empty!
   </div>
+  <div>
+  Continue Shopping
+  <%= link_to :root do %>
+    <%= fa_icon 'arrow-right' %>
+  <% end %>
+  </div>
 <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
