@@ -19,7 +19,7 @@ This project was created and published by me as part of my learnings at [Lightho
 ## Bug Fixes
 <b>Missing Admin Security</b>: User must enter HTTP auth login/password to access admin functionality
 
-<b>Checking out with Empty Cart</b>: If visitor goes to the cart when cart is empty, a message is displayed indicating that there are no items in the cart
+<b>Checking out with Empty Cart</b>: If visitor goes to the cart when cart is empty, a message is displayed indicating that there are no items in the cart. Visitor is prompted to keep shopping with link to products page
 
 ## Testing
 - RSpec
